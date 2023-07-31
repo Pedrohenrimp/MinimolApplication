@@ -6,9 +6,9 @@ namespace MinimolGames
     public class PlayerController : MonoBehaviour
     {
         #region Members
-        public static Action<Vector3> OnPlayerMoved;
-        public static Action<int> OnDamageReceived;
-        public static Action OnPlayerDied;
+        public static event Action<Vector3> OnPlayerMoved;
+        public static event Action<int> OnDamageReceived;
+        public static event Action OnPlayerDied;
 
         [SerializeField]
         private float mMoveSpeed = 5f;
@@ -21,7 +21,7 @@ namespace MinimolGames
         #endregion
 
         #region Unity Methods
-        private void Update()
+        private void FixedUpdate()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

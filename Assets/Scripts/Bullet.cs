@@ -7,8 +7,8 @@ namespace MinimolGames
     public class Bullet : MonoBehaviour
     {
         #region Members
-        public static Action<GameObject> OnEnemyDied;
-        public static Action<GameObject> OnMovementEnded;
+        public static event Action<GameObject> OnEnemyDied;
+        public static event Action<GameObject> OnMovementEnded;
 
         [SerializeField]
         [Range(Constants.MinBulletSpeed, Constants.MaxBulletSpeed)]

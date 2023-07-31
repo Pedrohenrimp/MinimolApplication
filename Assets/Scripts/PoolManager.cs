@@ -56,7 +56,7 @@ namespace MinimolGames
         {
             for(int i = 0; i < mObjectPool.Count; i++)
             {
-                if (mObjectPool[i].GetObject() == aObject)
+                if (mObjectPool[i].GetObject().GetInstanceID().Equals(aObject.GetInstanceID()))
                 {
                     mObjectPool[i].SetUse(false);
                     break;

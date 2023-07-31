@@ -43,7 +43,6 @@ namespace MinimolGames
                     mActiveBullets++;
                     newBullet.transform.position = mSpawnPoint.position;
                     newBullet.transform.rotation = mSpawnPoint.rotation;
-                    newBullet.SetActive(true);
                 }
             }
         }
